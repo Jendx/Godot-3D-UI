@@ -4,10 +4,4 @@
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <RootNamespace>DGUI</RootNamespace>
   </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Update="Godot.SourceGenerators" Version="4.2.1" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Update="GodotSharp" Version="4.2.1" />
-  </ItemGroup>
 </Project>

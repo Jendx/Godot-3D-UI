@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://dtbpalxcf5j25"]
+
+[ext_resource type="Script" path="res://3DUI.cs" id="1_w6lr0"]
+[ext_resource type="PackedScene" uid="uid://cm3vy220jf1l6" path="res://UI.tscn" id="2_jegmx"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_djym8"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ni5n"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_djym8")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_5xw8h"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5gckr"]
+size = Vector3(1.98, 0.08, 1.99)
+
+[node name="3DUI" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0737271, 1.18421, 0.0921053)
+script = ExtResource("1_w6lr0")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+
+[node name="Control" parent="SubViewport" instance=ExtResource("2_jegmx")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -0.75593)
+material_override = SubResource("StandardMaterial3D_4ni5n")
+mesh = SubResource("PlaneMesh_5xw8h")
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/Area3D"]
+shape = SubResource("BoxShape3D_5gckr")

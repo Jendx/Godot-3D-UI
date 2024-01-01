@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cm3vy220jf1l6"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1163.0
+offset_bottom = 653.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 179.0
+offset_right = 507.0
+offset_bottom = 418.0
+text = "PRESS ME"
